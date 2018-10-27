@@ -47,6 +47,9 @@
 .Journeys:hover {
 	background: #ff0000;
 }
+.Journeys a {
+	color: inherit;
+}
 
 .text {
 	height: auto; width: auto;
@@ -62,7 +65,7 @@
 	position: relative;
 	left: 50%;
 	transform: translate(-50%, 0);
-	height: 25vh; width: 70vw;
+	min-height: 25vh; width: 70vw;
 	align-items: center;
 	justify-content: center;
 	border: 2px solid #000;
@@ -106,6 +109,7 @@
 .addvalue:hover {
 	border: 2px solid #82d3ff;
 	color: #82d3ff;
+	cursor: pointer;
 }
 
 @keyframes App-logo-spin {
