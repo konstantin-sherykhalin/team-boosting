@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 .App {
   text-align: center;
 }
@@ -55,7 +57,7 @@
 	height: auto; width: auto;
 	text-align: center;
 	text-decoration:underline;
-	font-family: 'Charmonman', cursive;
+	font-family: 'Lobster', cursive;
 	font-size: calc(20px + 2vmin);
 }
 
@@ -69,6 +71,7 @@
 	align-items: center;
 	justify-content: center;
 	border: 2px solid #000;
+	font-family: 'Lobster';
 }
 
 .container {

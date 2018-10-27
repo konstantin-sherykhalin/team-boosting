@@ -8,14 +8,20 @@ export default class App extends Component {
 	};
 
 	async componentDidMount() {
-		let json = await fetch('https://teamboostingapi.now.sh/journey/?format=json').then(res => res.json());
-		let name = json[0].journey_description;
-		this.setState({name:name});
+		console.log(this.props);
+		let params = this.props.match.params;
+		let json = await fetch('https://teamboostingapiv2.now.sh/journey/'+params.journey_id+'/step/'+params.step_id+'/?format=json').then(res => res.json());
+		console.log(json);
+		this.setState({
+			name: 'Наши '+json.step_name,
+			text: json.step_text,
+			values: json.questions.map(e => e.question),
+		});
 	}
 
 	newvalue = () => {
 		let values = this.state.values;
-		values.push('Цель '+(values.length+1));
+		values.push('Ценность '+(values.length+1));
 		this.setState({values})
 	}
 
@@ -25,8 +31,8 @@ export default class App extends Component {
 				<div className="header">
 					<div className="Journeys"><Link to="/">Journeys</Link></div><br/>
 				</div>
-				<div className="text">Team vision: Core Values</div>
-				<div className="box" dangerouslySetInnerHTML={{__html: this.state.name}} />
+				<div className="text">{this.state.name}</div>
+				<div className="box" dangerouslySetInnerHTML={{__html: 'Очень важно договориться о ценностях и придерживаться их '}} />
 				<div className="container">
 					{this.state.values.map((e,i) => (<div key={i} className="value">{e}</div>))}
 					<div onClick={this.newvalue} className="addvalue">+</div>
