@@ -22,6 +22,81 @@
   color: #61dafb;
 }
 
+.header {
+	position: relative; top: 0; left: 0;
+	height: 10vh; width: 100%;
+	background: #ed4015;
+	text-align: center;
+}
+
+.Journeys {
+	position: relative; padding-left: 1%; padding-right: 1%;
+	top: 0; right: 0%;
+	height: auto; width: auto;
+	text-align: center;
+	font-family: 'Charmonman', cursive;
+	font-size: calc(20px + 2vmin);
+	color: #fff;
+	border-radius: 15%;
+}
+
+.Journeys:hover {
+	background: #ff0000;
+}
+
+.text {
+	height: auto; width: auto;
+	text-align: center;
+	text-decoration:underline;
+	font-family: 'Charmonman', cursive;
+	font-size: 5vmin;
+}
+
+.box {
+	margin: 3vmin;
+	padding: 3vmin;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	height: 25vh; width: 70vw;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #000;
+}
+
+.container {
+	margin: 3vmin;
+	padding: 3vmin;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	height: auto; width: 70vw;
+	align-items: center;
+	justify-content: space-between;
+	border: 2px solid #000;
+}
+
+.value {
+	margin-bottom: 3vmin;
+	padding: 3vmin;
+	position: relative;
+	height: auto; width: 45%;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #000;
+}
+.addvalue {
+	margin-bottom: 3vmin;
+	padding: 3vmin;
+	position: relative;
+	height: auto; width: 45%;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #000;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -30,3 +105,5 @@
     transform: rotate(360deg);
   }
 }
+
+@import url('https://fonts.googleapis.com/css?family=Charmonman');
