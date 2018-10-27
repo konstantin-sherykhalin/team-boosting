@@ -1,29 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {Button} from 'antd';
-import {Row,Col} from 'antd';
-import Header from './Header';
-import H2 from './H2';
-import CheckBoxes from './CheckBoxes';
-import Image from './Image';
-import Home from './Home';
-import Main from './Main';
-class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state={name: 'la'}
-	}
-	
-  render() {
-	console.log(this.state.name);
-    return (
-      <div>
-			<Header/>
-			<Main/>
-	  </div>
-    );
-  }
-}
+import React,{Component} from 'react';
+import {Route,Switch} from 'react-router-dom';
 
-export default App;
+import Header from './Header';
+
+import Main		from './components/Main';
+import Journey	from './components/Journey';
+import Step		from './components/Step';
+
+import './App.css';
+import './ilya.css';
+
+export default () => (
+	<div>
+		<Header/>
+		<Switch>
+			<Route exact path='/' component={Main} />
+			<Route exact path='/journey/:journey_id' component={Journey} />
+			<Route exact path='/journey/:journey_id/step/:step_id' component={Step} />
+		</Switch>
+	</div>
+);
