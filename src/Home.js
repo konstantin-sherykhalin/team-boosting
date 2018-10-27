@@ -7,8 +7,6 @@ import Header from './Header';
 import H2 from './H2';
 import CheckBoxes from './CheckBoxes';
 import Image from './Image';
-import Home from './Home';
-import Main from './Main';
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -19,8 +17,11 @@ class App extends Component {
 	console.log(this.state.name);
     return (
       <div>
-			<Header/>
-			<Main/>
+			<H2/>
+			<div className="Main">
+				<CheckBoxes/>
+				<Image/>
+			</div>
 	  </div>
     );
   }

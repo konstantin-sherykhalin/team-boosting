@@ -21,7 +21,39 @@
 .App-link {
   color: #61dafb;
 }
+.Header {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-top: 10px;
+	background: dimgray;
+	/*padding: 10px;*/
+	
+}
+.Header button {
+	padding: 10px;
+	/*background: red;*/
+	color: #FFF;
+	cursor: pointer;
+	background: dimgray;
+	border: 2px solid black;
+}
+.Header button:hover{
+	background: red;
+}
 
+
+.Main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 20px;
+}
+.Checks {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
