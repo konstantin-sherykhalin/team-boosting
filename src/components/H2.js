@@ -10,11 +10,7 @@ class App extends Component {
 		this.setState({name:name});
 	}
 	render() {
-		return (
-			<div>
-				<h2 style={{marginLeft: '10px'}}>{this.state.name}</h2>
-			</div>
-		);
+		return (<h2>{this.state.name}</h2>);
 	}
 }
 

@@ -34,7 +34,9 @@ export default class App extends Component {
 	render() {
 		return (
 			<div className="Checks">
-				{this.state.name.map((elem,i) => (<p key={i}><Link to={'/journey/'+this.props.journey_id+'/step/'+(i+1)}>{elem}</Link></p>))}
+				{this.state.name.map((elem,i) => (
+					<p key={i} style={{width:500}}><Link to={'/journey/'+this.props.journey_id+'/step/'+(i+1)}>{elem}</Link></p>
+				))}
 			</div>
 		);
 	}
